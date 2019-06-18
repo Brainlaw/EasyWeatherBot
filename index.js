@@ -16,7 +16,7 @@ bot.onText(/\/weather (.+)/, (msg, match) => {
         // после отвкта  кидаем в  объект  weather нужные нам значения которые мы получили из JSON
         weather.weather = `${response.data.weather[0].main}, ${response.data.weather[0].description}`;
         weather["city name"] = response.data.name;
-        weather.temp = `Tepm : ${response.data.main.temp}C° `;
+        weather.temp = `Temp : ${response.data.main.temp}C° `;
         weather.wind = `Speed of wind: ${response.data.wind.speed} m/s ${response.data.wind.deg}deg`;
     })
     .then(()=> {
