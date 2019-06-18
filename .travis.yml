@@ -5,7 +5,7 @@ node_js:
   - 7.2.1
   - 6.9.2
 
-install:
+before_script:
   - npm install dotenv -s
 
 script:
