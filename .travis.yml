@@ -1,8 +1,12 @@
 language: node_js
-branches:
-	only:
-		- master
-before_install:
-	- chmod +x gradlew
-install: true
-scpript: "./gradlew build -x copyDistFiles"
+
+node_js:
+  - 7.4.0
+  - 7.2.1
+  - 6.9.2
+
+install:
+  - npm install dotenv -s
+
+script:
+- node .
